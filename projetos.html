@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Projetos</title>
+<style>
+  :root {
+  /* 🎨 Paleta Corporativa Moderna e Tecnológica */
+  --cor-primaria: #0D47A1;     /* Azul escuro tecnológico */
+  --cor-secundaria: #1976D2;   /* Azul padrão corporativo */
+  --cor-destaque: #42A5F5;     /* Azul claro */
+  --cor-texto: #212121;        /* Cinza grafite */
+  --cor-fundo: #FAFAFA;        /* Branco gelo */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+/* ===== PROJETO ===== */
+.projeto {
+  margin: 20px auto;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  border-top: 5px solid var(--cor-secundaria);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--cor-destaque);
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Meus Projetos</h1>
+</header>
+<main>
+
+    <div class="projeto">
+    <h2><a href="Zeev.html"> Faturamento e Boletim de medição</a></h2>
+    <p>Criação de apliativo na plataforma Zeev</p>
+
+  </div>
+  <h3><a href="teste.html">⬅ Voltar para o portfólio</a></h3>
+</main>
+</body>
+</html>

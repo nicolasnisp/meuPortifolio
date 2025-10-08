@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos em Java</title>
+<style>
+:root {
+  /* 🎨 Paleta Corporativa Moderna e Tecnológica */
+  --cor-primaria: #0D47A1;     /* Azul escuro tecnológico */
+  --cor-secundaria: #1976D2;   /* Azul padrão corporativo */
+  --cor-destaque: #42A5F5;     /* Azul claro */
+  --cor-texto: #212121;        /* Cinza grafite */
+  --cor-fundo: #FAFAFA;        /* Branco gelo */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+/* ===== PROJETOS ===== */
+.projeto {
+  margin: 20px auto;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-top: 5px solid var(--cor-secundaria);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CÓDIGO ===== */
+code {
+  display: block;
+  background: #E3F2FD; /* Azul clarinho coerente com a paleta */
+  padding: 10px;
+  text-align: left;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: Consolas, monospace;
+  color: var(--cor-primaria);
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--cor-destaque);
+}
+
+</style>
+</head>
+<body>
+<header>
+  <h1>Projetos em Java</h1>
+</header>
+<main>
+  <div class="projeto">
+    <h2>Calculadora ISC</h2>
+    <p>Programa em Java que calcula o ISC(Indice de satisfação do Cliente).</p>
+    <code>
+      import java.util.Scanner;<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Scanner sc = new Scanner(System.in); // Cria o objeto Scanner para ler entradas do usuário<br>
+
+        // Entrada de dados<br>
+        System.out.print("Digite a quantidade de respostas Boas: ");<br>
+        int boas = sc.nextInt(); // Lê quantidade de respostas boas<br>
+
+        System.out.print("Digite a quantidade de respostas Regulares: ");<br>
+        int regulares = sc.nextInt(); // Lê quantidade de respostas regulares<br>
+
+        System.out.print("Digite a quantidade de respostas Ruins: ");<br>
+        int ruins = sc.nextInt(); // Lê quantidade de respostas ruins<br>
+
+        // Soma total de respostas<br>
+        int totalRespostas = boas + regulares + ruins;<br>
+
+        // Verifica se há respostas para evitar divisão por zero<br>
+        if (totalRespostas == 0) {<br>
+            System.out.println("Não há respostas para calcular o ISC.");<br>
+        } else {<br>
+            // Fórmula do Índice de Satisfação do Cliente (ISC)<br>
+            double isc = (10.0 * boas + 5.0 * regulares + 1.0 * ruins) / totalRespostas;<br>
+
+            // Exibe o resultado com 2 casas decimais<br>
+            System.out.printf("O Índice de Satisfação do Cliente (ISC) é: %.2f%n", isc);<br>
+        }<br>
+
+        sc.close(); // Fecha o Scanner<br>
+    }<br>
+}<br>
+
+      <br>
+    </code>
+  </div>
+
+  <p><a href="teste.html">⬅ Voltar para o portfólio</a></p>
+</main>
+</body>
+</html>

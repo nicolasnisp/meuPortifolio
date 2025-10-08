@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Nicolas</title>
+
+<!-- Ícones Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  :root {
+    /* 🎨 Paleta Corporativa Moderna e Tecnológica */
+    --cor-primaria: #0D47A1;
+    --cor-secundaria: #1976D2;
+    --cor-destaque: #42A5F5;
+    --cor-texto: #212121;
+    --cor-fundo: #FAFAFA;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--cor-texto);
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 25px 15px;
+    letter-spacing: 0.5px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+
+  /* ===== FRASE ===== */
+  .frase {
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 12px 20px;
+    font-size: 20px;
+    margin: 20px 40px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ===== MAIN ===== */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .card-sem-imagem {
+    width: 320px;
+    min-height: 200px;
+    background-color: var(--cor-primaria);
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .card-sem-imagem.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .card-sem-imagem:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    border-left-color: white;
+    background-color: var(--cor-secundaria);
+  }
+
+  .card-conteudo {
+    padding: 20px;
+  }
+
+  .card-titulo {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-descricao {
+    font-size: 1em;
+    color: #f5f5f5;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .card-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .card-link:hover {
+    background-color: white;
+    color: var(--cor-primaria);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 25px 15px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Submenu da esquerda */
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+  }
+
+  .footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .footer-menu a:hover {
+    color: var(--cor-destaque);
+  }
+
+  /* Submenu da direita (contatos) */
+  .footer-contatos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-contatos a {
+    color: white;
+    font-size: 22px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-contatos a:hover {
+    color: var(--cor-destaque);
+  }
+
+  /* Linha final */
+  .footer-creditos {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #cfd8dc;
+  }
+
+  @media (max-width: 700px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Prazer, me chamo Nicolas</h1>
+  </header>
+
+  <p class="frase">Profissional dedicado a desenvolver soluções criativas e eficientes com foco em qualidade.</p>
+
+  <main>
+    <div class="cards-container">
+      <div class="card-sem-imagem">
+        <div class="card-conteudo">
+          <h2 class="card-titulo">HTML & CSS</h2>
+          <p class="card-descricao">Nesta seção mostro meus projetos em HTML e CSS.</p>
+          <a href="html-css.html" class="card-link">Ver Exemplos</a>
+        </div>
+      </div>
+
+      <div class="card-sem-imagem">
+        <div class="card-conteudo">
+          <h2 class="card-titulo">Java</h2>
+          <p class="card-descricao">Nesta seção mostro meu conhecimento em Java.</p>
+          <a href="java.html" class="card-link">Ver Projetos</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER PROFISSIONAL ===== -->
+  <footer>
+    <div class="footer-container">
+      <!-- Submenu ESQUERDA -->
+      <ul class="footer-menu">
+        <li><a href="teste.html"><i class="fas fa-home"></i> Página inicial</a></li>
+        <li><a href="projetos.html"><i class="fas fa-briefcase"></i> Meus projetos</a></li>
+      </ul>
+
+      <!-- Submenu DIREITA -->
+      <ul class="footer-contatos">
+        <li><a href="mailto:nicolas@email.com" title="E-mail"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/seugithub" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-creditos">
+      © <span id="ano"></span> Nicolas Costa — Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    // Mostra o ano atual
+    document.getElementById("ano").textContent = new Date().getFullYear();
+
+    // Animação suave para os cards
+    window.addEventListener("load", () => {
+      const cards = document.querySelectorAll(".card-sem-imagem");
+      setTimeout(() => {
+        cards.forEach((card, i) => {
+          setTimeout(() => card.classList.add("visible"), i * 200);
+        });
+      }, 300);
+    });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
